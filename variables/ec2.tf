@@ -10,10 +10,10 @@ resource "aws_instance" "web" {
 
 
 resource "aws_security_group" "roboshop_all" {
-  name        = var.sgname
+  name        = var.sg-name
   description = var.sg-description
       ingress {
-    from_port        = var.Inbound-from-port
+    from_port        = var.inbound-from-port
     to_port          = 0
     protocol         = "tcp"
     cidr_blocks      = var.cidr-blocks
