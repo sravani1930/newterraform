@@ -6,3 +6,31 @@ resource "aws_instance" "web" {
   tags = var.tags
 
 }
+
+
+resource "aws_security_group" "roboshop_all" {
+  name        = var.sgname
+  description = var.sg-description
+      ingress {
+    from_port        = var.Inbound-from-port
+    to_port          = 0
+    protocol         = "tcp"
+    cidr_blocks      = var.cidr-blocks
+  
+ }
+    
+    egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = var.cidr-blocks
+    
+  }
+
+
+
+  tags = {
+    Name = "roboshop_all_aws"
+  }
+}
+
