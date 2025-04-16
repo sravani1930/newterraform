@@ -1,4 +1,4 @@
-variable instance_name {
+variable instance_names {
     type = list
     default = ["mongodb","web","redis","cart","user","shipping","rabbitmq","payment","mysql","dispatch","catalogue"]
 }
@@ -11,11 +11,11 @@ variable "instance_type" {
     type    = string
     default = "t3.micro"
 }
-variable "tags" {
-    type    = map
-    default = {
-     name = "web"
-     project = "ROBOSHOP"
-     Environment = "dev"
-    }
-}
+# variable "tags" {
+#     type    = map
+#     default = {
+#      name = "web"
+#      project = "ROBOSHOP"
+#      Environment = "dev"
+#     }
+# }
